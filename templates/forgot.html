@@ -1,0 +1,23 @@
+<div class="forgot-container-main">
+    <div class="forgot-container-sub">
+        <h1 class="forgot-head">Forgot Password</h1>
+        <form onsubmit="submitForm(event, this, 'forgot')">
+            {% csrf_token %}
+            
+            <input type="email" name="email" placeholder="Enter your email*" required><br><br>
+            <input type="password" name="new_password" placeholder="Change your password*" required><br><br>
+            
+            <button type="submit">Change Password</button>
+        </form>
+
+        <p class="forgot-login-back">
+            <a href="#" onclick="loadPage('login'); return false;">Back</a>
+        </p>
+
+        <p class="forgot-error">
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+        </p>
+    </div>
+</div>

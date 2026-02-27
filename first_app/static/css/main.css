@@ -1,0 +1,506 @@
+/*List User*/
+.first{
+    width: 100%;
+    height: 100vh;
+    border: 1px solid black;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+table{
+    width: 95%;
+    border: 2px solid grey;
+    border-collapse: collapse;
+    margin-left: 50px;
+    position: relative;
+    top: 40px;
+}
+
+th{
+    text-align: center;
+    border: 1px solid grey;
+    background: #0277bd;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+td{
+    text-align: center;
+    border: 1px solid grey;
+    height: 80px;
+    font-size: 20px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    top: 30px;
+}
+
+.container button{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background: #0277bd;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.edit{
+    width: 60px;
+    height: 40px;
+    border-radius: 5px;
+    background: #04d304;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.delete{
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    background: #f81515;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.view{
+    width: 70px;
+    height: 40px;
+    border-radius: 5px;
+    background: #0277bd;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.list-logout{
+     width: 60px;
+     height: 35px;
+     cursor: pointer;
+     position:relative;
+     left: 96%;
+     top: 10px;
+     color: white;
+     background: #1578fd;
+     border-radius: 10px;
+}
+
+/*Add User or Edit User*/
+.form-container {
+    width: 450px;
+    background: white;
+    margin: 40px auto;
+    padding: 35px;
+    border-radius: 8px;
+    border: 1px solid grey;
+}
+
+.form-container h1 {
+    text-align: center;
+    background: #0277bd;
+    color: white;
+    margin: -25px -25px 20px -25px;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+form input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.form-btn{
+    width: 15%;
+    background: #0277bd;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.backing{
+    width: 10%;
+    background: #0277bd;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    top: 10px;
+    display: block;
+    text-decoration: none;
+    border: 2px solid #303030;
+}
+
+/*User Detail*/
+.detail-container-main{
+    width: 30%;
+    height: 45vh;
+    background: #0277bd;
+    margin: 40px auto;
+    padding: 35px;
+    border-radius: 8px;
+}
+
+.detail-container-main h1{
+    font-family: "Segoe UI", system-ui, sans-serif;
+    position: relative;
+    left: 35%;
+}
+
+.detail-container-sub{
+    width: 90%;
+    height: 26vh;
+    background: white;
+    margin: 40px auto;
+    padding: 35px;
+    border-radius: 8px;
+    position: relative;
+    top: -10px;
+}
+
+.detail-btn{
+    width: 60px;
+    height: 40px;
+    position: relative;
+    left: 48%;
+    top: -20px;
+    border-radius: 5px;
+    background: #04d304;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.detail-image{
+    display: flex;
+    gap: 42%;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-name{
+    display: flex;
+    gap: 45%;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-date{
+    display: flex;
+    gap: 30%;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-date p{
+    position: relative;
+    left: 50px;
+}
+.detail-time{
+    display: flex;
+    gap: 48%;
+    justify-content: center;
+    align-items: center;
+}
+
+hr{
+    width: 113.2%;
+    position: relative;
+    right: 35px;
+}
+
+
+/*Delete User*/
+.delete-container-main{
+    width: 30%;
+    height: 16vh;
+    background: #ffd300;
+    margin: 40px auto;
+    padding: 35px;
+    border-radius: 10px;
+}
+
+.delete-container-sub{
+    width: 90%;
+    height: 5vh;
+    background: #0277bd;
+    padding: 35px;
+    border-radius: 8px;
+}
+
+.delete-container-sub h3{
+    font-size: 2rem;
+    position: relative;
+    top: -45px;
+    left: 18px;
+}
+
+.confirm-btn{
+    width: 60px;
+    height: 40px;
+    background: #04c604;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.back-btn{
+    width: 60px;
+    height: 40px;
+    background: #dc0101;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    top: 10px;
+}
+
+.btns a{
+    text-decoration: none;
+    color: white;
+}
+
+/*signup*/
+.sign-container-main{
+    width: 40%;
+    height: 100vh;
+    background: #1DA27E;
+    position: relative;
+    left: 30%;
+}
+
+.sign-container-sub{
+    background: white;
+    width: 400px;
+    padding: 40px;
+    margin: auto;
+    position: relative;
+    top: 20%;
+    border-radius: 10px;
+}
+
+.sign-head{
+    position: relative;
+    left: 35%;
+    top: -15px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.sign-container-main input{
+    height: 50px;
+}
+
+.sign-container-main button{
+    height: 50px;
+    width: 100%;
+    background: #1DA27E;
+    border: 1px solid #cacaca;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.sign-account{
+    position: relative;
+    left: 22%;
+    bottom: -15px;
+    font-weight: bold;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.sign-container-main p a{
+    text-decoration: none;
+    color: #1DA27E;
+}
+
+.sign-error{
+    position: relative;
+    left: 9%;
+    bottom: -12px;
+    font-weight: bold;
+    color: red;
+    font-family: 'Consolas', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+}
+
+/*login*/
+.login-container-main{
+    width: 40%;
+    height: 100vh;
+    background: #1DA27E;
+    position: relative;
+    left: 30%;
+}
+
+.login-container-sub{
+    background: white;
+    width: 400px;
+    padding: 40px;
+    margin: auto;
+    position: relative;
+    top: 20%;
+    border-radius: 10px;
+}
+
+.login-head{
+    position: relative;
+    left: 38%;
+    top: -15px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.login-container-main input{
+    height: 50px;
+}
+
+.login-container-main button{
+    height: 50px;
+    width: 100%;
+    background: #1DA27E;
+    border: 1px solid #cacaca;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.login-account{
+    position: relative;
+    left: 22%;
+    bottom: -15px;
+    font-weight: bold;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.login-container-main p a{
+    text-decoration: none;
+    color: #1DA27E;
+}
+
+.login-error{
+    position: relative;
+    left: 28%;
+    bottom: -22px;
+    font-weight: bold;
+    color: red;
+    font-family: 'Consolas', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+}
+
+.login-forgot{
+    position: relative;
+    left: 68%;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 1rem;
+}
+
+/*forgot*/
+.forgot-container-main{
+    width: 40%;
+    height: 100vh;
+    background: #1DA27E;
+    position: relative;
+    left: 30%;
+}
+
+.forgot-container-sub{
+    background: white;
+    height: 43vh;
+    width: 400px;
+    padding: 40px;
+    margin: auto;
+    position: relative;
+    top: 20%;
+    border-radius: 10px;
+}
+
+.forgot-head{
+    position: relative;
+    left: 20%;
+    top: -15px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.forgot-container-main input{
+    height: 50px;
+}
+
+.forgot-container-main button{
+    height: 50px;
+    width: 100%;
+    background: #1DA27E;
+    border: 1px solid #cacaca;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.forgot-error{
+    position: relative;
+    left: 34%;
+    bottom: -12px;
+    font-weight: bold;
+    color: red;
+    font-family: 'Consolas', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+}
+
+.forgot-login-back{
+    position: relative;
+    top: 14px;
+}
+
+.forgot-login-back a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background: #1DA27E;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Consolas', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    position: relative;
+    top: -10px;
+}

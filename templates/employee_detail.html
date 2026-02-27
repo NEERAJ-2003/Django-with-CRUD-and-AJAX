@@ -1,0 +1,28 @@
+<div class="detail-container-main">
+    <h1>User Details</h1>
+    <div class="detail-container-sub">
+        <div class="detail-image">
+            Photo
+            {% if employee.files %}
+                <img src="{{ employee.files.url }}">
+            {% endif %}
+        </div>
+        <hr>
+        <div class="detail-name">
+            Name
+            <p>{{ employee.name }}</p>
+        </div>
+        <hr>
+        <div class="detail-date">
+            Date of Joining
+            <p>{{ employee.pub_date }}</p>
+        </div>
+        <hr>
+        <div class="detail-time">
+            Time
+            <p>{{ employee.pub_time }}</p>
+        </div>
+    </div>
+</div>
+
+<button class="detail-btn" onclick="loadPage('list'); return false;">Back</button>

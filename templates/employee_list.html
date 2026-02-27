@@ -1,0 +1,46 @@
+<div class="first">
+    {% if user.is_authenticated %}
+        <button class="list-logout" onclick="logoutUser('logout'); return false;">Logout</button>
+    {% endif %}
+
+    <div class="container">
+        <h1>User Records</h1>
+        <button onclick="loadPage('create'); return false;">Add User</button>
+    </div>
+
+    <table>
+        <tr>
+            <th>Student Id</th>
+            <th>Name</th>
+            <th>Image</th>
+            <th>Date of Joining</th>
+            <th>Time</th>
+            <th>File</th>
+            <th>Action</th>
+        </tr>
+
+        {% for employee in employees %}
+        <tr>
+            <td>{{ employee.id }}</td>
+            <td>{{ employee.name }}</td>
+            <td>
+                {% if employee.files %}
+                    <img src="{{ employee.files.url }}">
+                {% endif %}
+            </td>
+            <td>{{ employee.pub_date }}</td>
+            <td>{{ employee.pub_time }}</td>
+            <td>
+                {% if employee.files %}
+                    <a href="{{ employee.files.url }}">{{ employee.files.name|cut:"files/" }}</a>
+                {% endif %}
+            </td>
+            <td>
+                <button class="edit" onclick="loadEdit('{{ employee.id }}'); return false;">Edit</button> /
+                <button class="delete" onclick="loadDelete('{{ employee.id }}'); return false;">Delete</button> /
+                <button class="view" onclick="loadDetail('{{ employee.id }}'); return false;">View</button>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>

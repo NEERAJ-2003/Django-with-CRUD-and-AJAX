@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body id="main-body">
+
+<div id="app"></div>
+
+<script>
+
+// SPA PAGE LOADER
+function loadPage(page) {
+    localStorage.setItem("currentPage", page);
+    $("#app").load("/load/" + page + "/");
+}
+
+
+// FORM SUBMISSION (POST)
+function submitForm(event, form, page) {
+    event.preventDefault();
+    var formData = new FormData(form);
+    $.ajax({
+        url: "/load/" + page + "/",
+        type: "POST",
+        data: formData,
+        processData: false,   //for image upload
+        contentType: false,   //for image upload
+
+        success: function(response) {
+            // Update SPA state after login/signup
+            if (page === "login") {
+                localStorage.setItem("currentPage", "list");
+            }
+            if (page === "signup") {
+                localStorage.setItem("currentPage", "login");
+            }
+            $("#app").html(response);
+        },
+        error: function() {
+            $("#app").html("<h3>Something went wrong</h3>");
+        }
+    });
+}
+
+
+
+
+// EDIT EMPLOYEE
+function loadEdit(id) {
+    if (String(id).startsWith("edit-")) {
+        loadPage(id);
+    } else {
+        loadPage("edit-" + id);
+    }
+}
+
+
+// DELETE EMPLOYEE
+function loadDelete(id) {
+    $("#app").load("/load/delete-" + id + "/");
+}
+
+
+
+// VIEW EMPLOYEE DETAIL
+function loadDetail(id) {
+    loadPage("detail-" + id);
+}
+
+
+// LOGOUT
+function logoutUser() {
+    $("#app").load("/load/logout/", function(response, status) {
+        if (status === "error") {
+            $("#app").html("<h3>Logout failed</h3>");
+        } else {
+            localStorage.removeItem("currentPage");
+        }
+    });
+}
+
+
+
+// INITIAL LOAD
+$(document).ready(function() {
+    var savedPage = localStorage.getItem("currentPage");
+    if (savedPage) {
+        loadPage(savedPage);
+    } else {
+        // Try loading employee list if logged in
+        loadPage("list");
+    }
+});
+
+</script>
+</body>
+</html>

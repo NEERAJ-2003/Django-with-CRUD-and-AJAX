@@ -1,0 +1,10 @@
+<div class="form-container">
+    <h1>Add User</h1>
+    <form onsubmit="submitForm(event, this, 'create')" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="form-btn">Save</button>
+    </form>
+
+    <a href="#" onclick="loadPage('list'); return false;" class="backing">Back</a>
+</div>

@@ -1,0 +1,25 @@
+<div class="sign-container-main">
+    <div class="sign-container-sub">
+        <h1 class="sign-head">SignUp</h1>
+        <form onsubmit="submitForm(event, this, 'signup')">
+            {% csrf_token %}
+            
+            <input type="email" name="email" placeholder="Enter your email*" required><br><br>
+            <input type="password" name="password1" placeholder="Create a password*" required><br><br>
+            <input type="password" name="password2" placeholder="Confirm your password*" required><br><br>
+            
+            <button type="submit">Signup</button>
+        </form>
+
+        <p class="sign-account">
+            Already have an account?
+            <a href="#" onclick="loadPage('login'); return false;"> Login</a>
+        </p>
+
+        <p class="sign-error">
+            {% for message in messages %}
+                {{ message }}<br>
+            {% endfor %}
+        </p>
+    </div>
+</div>
